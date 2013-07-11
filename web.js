@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
 	if (err) throw err;
 	console.log(data);
 	});
-    var str = content.toString();
+    var str = content.toString('utf16');
     response.send(str);
 });
 
