@@ -4,12 +4,12 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    var content = fs.readFileSync('index.html', function (err, data){
+    var filename = fs.readFileSync('./index.html', 'utf-8', function (err, data){
 	if (err) throw err;
 	console.log(data);
 	});
-    var str = content.toString('utf16');
-    response.send(str);
+//    var str = filename.toString('ascii');
+    response.send(filename);
 });
 
 var port = process.env.PORT || 5000;
