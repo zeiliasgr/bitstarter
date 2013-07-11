@@ -8,7 +8,6 @@ app.get('/', function(request, response) {
 	if (err) throw err;
 	console.log(data);
 	});
-//    var str = filename.toString('ascii');
     response.send(filename);
 });
 
